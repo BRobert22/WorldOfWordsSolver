@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\pt_BR.aff" />
+    <None Remove="Files\pt_BR.dic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Files\pt_BR.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files\pt_BR.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyConsoleCore" Version="1.0.2" />
+    <PackageReference Include="WeCantSpell.Hunspell" Version="3.0.1" />
+  </ItemGroup>
+
+</Project>
